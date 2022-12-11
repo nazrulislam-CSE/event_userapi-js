@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+    <style>
+        article{
+            border:2px solid tomato;
+            border-radius: 20px;
+            margin:5px;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="section">
+            <h3>Explore Dom</h3>
+            <!-- article*3>h3{article-$}+p.author{author-$}+p.description>lorem30 -->
+            <article>
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit nihil vitae consequatur dolorum quibusdam perspiciatis quos molestias recusandae expedita? Corrupti commodi officia natus fugit blanditiis earum? Culpa placeat facere nisi.</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Officia laudantium, quo explicabo corporis autem velit recusandae similique alias nam vero, nemo reprehenderit in, totam ducimus voluptates dolore omnis beatae vitae ipsum sunt nihil quaerat. Officia maxime reiciendis voluptate.</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Eius aliquid ducimus consequuntur quaerat quisquam temporibus quas a placeat excepturi aspernatur dicta expedita libero laboriosam veniam quia minima cum accusamus ut id dignissimos maxime, nihil vero! Voluptate, aliquam molestiae!</p>
+            </article>
+            <p id="first">My First Paragraph</p>
+            <p>My Second Paragraph</p>
+        </div>
+    </main>
+    <script>
+        var authors = document.getElementsByClassName('author');
+        for( var i = 0; i < authors.length; i++){
+            var element = authors[i];
+           element.style.backgroundColor ="lightblue";
+           element.style.margin ="10px";
+        }
+    </script>
+    <script>
+        var first = document.getElementById('first');
+        first.style.backgroundColor = "lime";
+        first.style.color = "white";
+        first.style.padding = "20px";
+        first.style.textAlign = "center";
+        first.style.boxShadow = "30px red";
+        first.style.fontSize = "25px";
+        first.style.fontFamily = "cursive";
+    </script>
+    <script>
+        var user ={name:'Kamrul Islam', song = 'Hridoyer Shimana', members:6};
+        // DOM = Document Object Model //
+        console.log(document.body);
+    </script>
+</body>
+</html>
